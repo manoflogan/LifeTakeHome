@@ -5,6 +5,7 @@
         <classes>
             <class name="com.manoflogan.vida.DecimalZipTest" />
             <class name="com.manoflogan.vida.ElevatorTest" />
+            <class name="com.manoflogan.vida.SaddlePointTest" />
         </classes>
     </test>
 </suite>
