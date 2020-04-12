@@ -1,5 +1,5 @@
 // Copyright 2019 ManOf Logan. All Rights Reserved.
-package com.krishnanand.vida;
+package com.manoflogan.vida;
 
 /**
  *

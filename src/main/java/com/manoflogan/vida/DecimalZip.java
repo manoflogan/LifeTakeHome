@@ -1,5 +1,5 @@
 // Copyright 2019 ManOf Logan. All Rights Reserved.
-package com.krishnanand.vida;
+package com.manoflogan.vida;
 
 /**
  *
@@ -21,7 +21,6 @@ public class DecimalZip {
     }
     while (i < firstLen) {
       sb.append(firstStr.charAt(i ++));
-      i++;
     }
     while (j < secondLen) {
       sb.append(secondStr.charAt(j ++));

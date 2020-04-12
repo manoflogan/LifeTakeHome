@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'org.testng', name: 'testng', version: '7.1.0'
+    testCompile 'org.hamcrest:hamcrest:2.2'
+}
+
+test {
+    delete file("$rootDir/testng-reports")
+    useTestNG() {
+        outputDirectory = file("$rootDir/testng-reports")
+        useDefaultListeners = true
+        suites "src/test/resources/testng-suites.xml"
+    }
+    reports.html.enabled(false)
+    testLogging {
+        showStandardStreams = true;
+        showStackTraces = true
+    }
+}

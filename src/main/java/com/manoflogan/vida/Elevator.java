@@ -1,5 +1,5 @@
 // Copyright 2019 ManOf Logan. All Rights Reserved.
-package com.krishnanand.vida;
+package com.manoflogan.vida;
 
 import java.util.ArrayDeque;
 import java.util.HashMap;
@@ -19,7 +19,7 @@ public class Elevator {
     Queue<Integer> queue = new ArrayDeque<>();
     while (start < end) {
       int weight = 0;
-      while (weight < Y && start < end && queue.size() < X) {
+      while (weight <= Y && start < end && queue.size() < X) {
 
         if (weight + A[start] > Y) {
           break;
@@ -32,11 +32,11 @@ public class Elevator {
       int size = queue.size();
       Map<Integer, Integer> floorToPassengerMapping = new HashMap<>();
       int index = 0;
-      while (index < size && !queue.isEmpty()) {
+      while (!queue.isEmpty()) {
         int passenger = queue.poll();
         floorToPassengerMapping.put(B[passenger],
             floorToPassengerMapping.getOrDefault(B[passenger], 0) + 1);
-        queue.offer(passenger);
+        //queue.offer(passenger);
         index ++;
       }
       count += floorToPassengerMapping.size() + 1; // Total number of stops + 1 for return to ground floor.

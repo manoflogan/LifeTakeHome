@@ -1,1 +1,13 @@
-.idea
+.DS_Store
+# Build Artifacts
+.gradle/
+build
+
+# IntelliJ artifacts
+*.iml
+*.ipr
+*.iws
+*.idea
+
+# TestNG reports
+testng-reports
